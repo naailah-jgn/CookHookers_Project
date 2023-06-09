@@ -1,0 +1,64 @@
+#searchbar {
+    margin-left: 100vh;
+    background: black;
+    width: 200px;
+    height: 50px;
+    opacity: 50%;
+    border-radius: 100px;
+}
+
+.titre {
+    text-align: center;
+    width: 769px;
+    height: 108px;
+    position: absolute;
+    margin-left: 30vh;
+}
+
+.image-video img {
+    width: 100vh;
+    height: 40vh;
+    left: 105px;
+    top: 300px;
+    position: absolute;
+}
+
+.image-video video {
+    width: 100vh;
+    height: 50vh;
+    left: 105px;
+    top: 100vh;
+    position: absolute;
+}
+
+.ingredients h2 {
+    margin-top: 0;
+    margin-left: 14vh;
+}
+
+.ingredients {
+    position: absolute;
+    left: 135vh;
+    top: 300px;
+    color: beige;
+    border-radius: 20%;
+    background-color: var(--colorbrownlight);
+    width: 50vh;
+    height: 30vh;
+}
+
+.description h2 {
+    margin-top: 0;
+    margin-left: 14vh;
+}
+
+.description {
+    position: absolute;
+    left: 135vh;
+    color: beige;
+    top: 100vh;
+    width: 50vh;
+    height: 30vh;
+    border-radius: 20%;
+    background-color: var(--colorbrownlight);
+}

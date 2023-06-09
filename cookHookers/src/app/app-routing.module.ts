@@ -3,9 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { ListOfRecipesComponent } from './list-of-recipes/list-of-recipes.component';
 import { PageTitleService } from './service/page-title.service';
+import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 
 const routes: Routes = [
   {path: 'menu', component: HeaderComponent},
+  {path: 'detail', component: RecipeDetailComponent},
   {path: 'allRecipes', component: ListOfRecipesComponent, data: { pageTitle: 'Page de toutes les recettes' }},
   {path: 'allRecipes/entrees', component: ListOfRecipesComponent, data: { categories: 'entrees', pageTitle: 'Page de toutes les entrées' } },
   {path: 'allRecipes/sides', component: ListOfRecipesComponent, data: { categories: 'sides', pageTitle: 'Page de tous les accompagnements' } },
