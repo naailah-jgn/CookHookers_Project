@@ -7,6 +7,5 @@ import { lang } from 'src/lang';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'cookHookers';
-  lang = lang;
+  
 }
