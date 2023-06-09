@@ -4,8 +4,10 @@ import { HeaderComponent } from './header/header.component';
 import { ListOfRecipesComponent } from './list-of-recipes/list-of-recipes.component';
 import { PageTitleService } from './service/page-title.service';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
+import { PreMobileComponent } from './pre-mobile/pre-mobile.component';
 
 const routes: Routes = [
+  {path: 'pre', component: PreMobileComponent},
   {path: 'menu', component: HeaderComponent},
   {path: 'detail', component: RecipeDetailComponent},
   {path: 'allRecipes', component: ListOfRecipesComponent, data: { pageTitle: 'Page de toutes les recettes' }},
