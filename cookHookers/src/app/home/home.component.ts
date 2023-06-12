@@ -1,64 +1,25 @@
-import { Component } from '@angular/core';
-// import {
-//   interval,
-//   Observable,
-//   startWith,
-//   Subject,
-//   switchMap,
-//   timer,
-// } from 'rxjs';
-interface Photo {
-  url: string;
-  title: string;
-}
-
+import { Component, OnInit } from '@angular/core';
+import { HomeService } from './home.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
-// entrees: Photo[] = [
-//     { url: '../../assets/image/entree1.jpg', title: 'Entrée 1' },
-//     { url: '../../assets/image/entree2.jpg', title: 'Entrée 2' },
-//     { url: '../../assets/image/entree3.jpg', title: 'Entrée 3' }
-//   ];
+export class HomeComponent implements OnInit{
+categories: any[] = [];
 
-//   plats: Photo[] = [
-//     { url: '../../assets/image/plat1.jpg', title: 'Plat 1' },
-//     { url: '../../assets/image/plat2.jpg', title: 'Plat 2' },
-//     { url: '../../assets/image/plat3.jpg', title: 'Plat 3' }
-//   ];
+  constructor(private homeService: HomeService) {}
 
-//   desserts: Photo[] = [
-//     { url: '../../assets/image/dessert1.jpg', title: 'Dessert 1' },
-//     { url: '../../assets/image/dessert2.jpg', title: 'Dessert 2' },
-//     { url: '../../assets/image/dessert3.jpg', title: 'Dessert 3' }
-//   ];
+  ngOnInit() {
+   this.homeService.getCategories().subscribe((data: any) => {
+    this.categories = data.categories;
 
-  // activeIndices = {
-  //   entrees: 0,
-  //   plats: 0,
-  //   desserts: 0
-  // };
-
-  //  goToPrevious(): void {
-  //   const isFirstSlide = this.currentIndex === 0;
-  //   const newIndex = isFirstSlide
-  //     ? this.slides.length - 1
-  //     : this.currentIndex - 1;
-
-  //   this.resetTimer();
-  //   this.currentIndex = newIndex;
-  // }
-
-  //   goToNext(): void {
-  //   const isLastSlide = this.currentIndex === this.slides.length - 1;
-  //   const newIndex = isLastSlide ? 0 : this.currentIndex + 1;
-
-  //   this.resetTimer();
-  //   this.currentIndex = newIndex;
-  // }
-
-
+    // Filtrer les catégories de petit-déjeuner, d'accompagnement et de dessert
+    const breakfastCategory = this.categories.find((category: any) => category.strCategory === 'Breakfast');
+    const sideCategory = this.categories.find((category: any) => category.strCategory === 'Side');
+    const dessertCategory = this.categories.find((category: any) => category.strCategory === 'Dessert');
+  // Remplir le tableau de catégories avec les catégories filtrées
+    this.categories = [breakfastCategory, sideCategory, dessertCategory]
+   });
+}
 }

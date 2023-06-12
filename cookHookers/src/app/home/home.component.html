@@ -4,23 +4,21 @@
 <div class="carousel">
     <div class="carousel-container">
         <span class="prev">&lt;</span>
-        <img src="../../assets/image/entree1.jpg" alt="Entrée 1">
-        <img src="../../assets/image/entree2.jpg" alt="Entrée 2">
+        <ng-container *ngFor="let category of categories?.slice(0, 3)">
+            <img [src]="category?.strCategoryThumb" [alt]="category?.strCategory" [routerLink]="['/detail', category?.idCategory]">
+        </ng-container>
         <h2>Entrée</h2>
-        <img src="../../assets/image/entree3.jpg" alt="Entrée 3">
-
         <span class="next">&gt;</span>
     </div>
-
 </div>
 
 <div class="carousel">
     <div class="carousel-container">
         <span class="prev">&lt;</span>
-        <img src="../../assets/image/plat1.jpg" alt="Plat 1">
-        <img src="../../assets/image/plat2.jpg" alt="Plat 2">
+        <ng-container *ngFor="let category of categories?.slice()">
+            <img [src]="category?.strCategoryThumb" [alt]="category?.strCategory" [routerLink]="['/detail', category?.idCategory]">
+        </ng-container>
         <h2>Plat</h2>
-        <img src="../../assets/image/plat3.jpg" alt="Plat 3">
         <span class="next">&gt;</span>
     </div>
 </div>
@@ -28,10 +26,10 @@
 <div class="carousel">
     <div class="carousel-container">
         <span class="prev">&lt;</span>
-        <img src="../../assets/image/dessert1.jpg" alt="Dessert 1">
-        <img src="../../assets/image/dessert2.jpg" alt="Dessert 2">
+        <ng-container *ngFor="let category of categories?.slice()">
+            <img [src]="category?.strCategoryThumb" [alt]="category?.strCategory" [routerLink]="['/detail', category?.idCategory]">
+        </ng-container>
         <h2>Dessert</h2>
-        <img src="../../assets/image/dessert3.jpg" alt="Dessert 3">
         <span class="next">&gt;</span>
     </div>
 </div>
