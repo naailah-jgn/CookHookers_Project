@@ -5,17 +5,22 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ListOfRecipesComponent } from './list-of-recipes/list-of-recipes.component';
-
+import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RecipeComponent } from './recipe/recipe.component';
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    ListOfRecipesComponent
+    ListOfRecipesComponent,
+    AdvancedSearchComponent,
+    RecipeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
