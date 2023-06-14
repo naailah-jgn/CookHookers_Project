@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit{
   isUserLoggedIn: boolean = false;
 
   constructor(private route: ActivatedRoute, private pageTitleService: PageTitleService){}
-  
+
   ngOnInit(): void {
   }
 

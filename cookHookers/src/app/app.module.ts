@@ -5,17 +5,23 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ListOfRecipesComponent } from './list-of-recipes/list-of-recipes.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
+import { HttpClientModule } from '@angular/common/http';
+import { EnterComponent } from './enter/enter.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    RecipeDetailComponent,
+    EnterComponent,
+    HomeComponent,
     HeaderComponent,
     ListOfRecipesComponent,
-    RecipeDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
