@@ -9,8 +9,11 @@ export class HomeService {
 
   constructor(private http: HttpClient) { }
 
-
-   getCategories(): Observable<any> {
+ getCategories(): Observable<any> {
     return this.http.get('https://www.themealdb.com/api/json/v1/1/categories.php');
-}
+  }
+
+  getCategoryImage(category: string): Observable<any> {
+    return this.http.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
+  }
   }

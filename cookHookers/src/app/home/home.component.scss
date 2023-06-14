@@ -47,6 +47,7 @@
 // .carousel-control-next {
 //     right: 10px;
 // }
+@import "~bootstrap/dist/css/bootstrap.css";
 header {
     text-align: center;
     font-family: 'Inter';
@@ -55,14 +56,30 @@ header {
     font-size: 20px;
 }
 
-.carousel {
-    width: 1426px;
+#carouselStarter,
+#carouselSide,
+#carouselDessert {
+    width: 1500px;
+    height: 200px;
+    border-radius: 10px;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 70px;
+    background-color: black;
 }
 
-.carousel h2 {
+#carouselStarter,
+#carouselSide,
+#carouselDessert img {
+    width: 1500px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+#carouselStarter,
+#carouselSide,
+#carouselDessert h2 {
     position: absolute;
     width: 200px;
     height: 39px;
@@ -80,7 +97,7 @@ header {
     text-align: center;
 }
 
-.carousel h2 plat {
+.carouselStarter h2 plat {
     position: inherit;
 }
 
@@ -93,7 +110,7 @@ header {
     height: 200px;
 }
 
-.carousel-container img {
+.carousel-inner img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -109,6 +126,15 @@ header {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev {
+    font-size: larger;
+}
+
+.carousel-control-next {
+    font-size: 1000;
+    color: black;
 }
 
 .carousel-container span:hover {

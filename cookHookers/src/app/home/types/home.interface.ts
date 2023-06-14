@@ -1,4 +1,5 @@
-// export interface HomeInterface {
-//   url: string;
-//   title: string;
-// }
+export interface HomeInterface {
+  url: string;
+  title: string;
+  image: string;
+}
