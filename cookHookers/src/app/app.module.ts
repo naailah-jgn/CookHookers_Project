@@ -8,6 +8,10 @@ import { ListOfRecipesComponent } from './list-of-recipes/list-of-recipes.compon
 import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RecipeComponent } from './recipe/recipe.component';
+import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
+import { SearchComponent } from './search/search.component';
+import { CategoriesComponent } from './categories/categories.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +19,10 @@ import { RecipeComponent } from './recipe/recipe.component';
     HeaderComponent,
     ListOfRecipesComponent,
     AdvancedSearchComponent,
-    RecipeComponent
+    RecipeComponent,
+    RecipeDetailComponent,
+    SearchComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
