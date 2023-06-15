@@ -10,12 +10,12 @@ const routes: Routes = [
   {path: 'menu', component: HeaderComponent},
   {path: 'detail', component: RecipeDetailComponent},
   {path: 'allRecipes', component: ListOfRecipesComponent, data: { pageTitle: 'Toutes les recettes' }},
-  {path: 'allRecipes/entrees', component: ListOfRecipesComponent, data: { categories: 'entrees', pageTitle: 'entrées' } },
-  {path: 'allRecipes/sides', component: ListOfRecipesComponent, data: { categories: 'sides', pageTitle: 'Accompagnements' } },
-  {path: 'allRecipes/desserts', component: ListOfRecipesComponent, data: { categories: 'desserts', pageTitle: 'Desserts' } },
-  {path: 'allRecipes/autres', component: ListOfRecipesComponent, data: { categories: 'autres', pageTitle: 'Autres recettes' } },
-  {path: 'search', component: AdvancedSearchComponent }
-
+  {path: 'allRecipes/entrees', component: ListOfRecipesComponent, data: { categories: 'Starter', pageTitle: 'Entrées' } },
+  {path: 'allRecipes/sides', component: ListOfRecipesComponent, data: { categories: 'mainCourse', pageTitle: 'Accompagnements' } },
+  {path: 'allRecipes/desserts', component: ListOfRecipesComponent, data: { categories: 'Dessert', pageTitle: 'Desserts' } },
+  {path: 'allRecipes/autres', component: ListOfRecipesComponent, data: { categories: 'Miscellaneous', pageTitle: 'Autres recettes' } },
+  {path: 'search', component: AdvancedSearchComponent },
+  // {path: 'allrecipes/:cat', component: ListOfRecipesComponent}
 ];
 
 @NgModule({

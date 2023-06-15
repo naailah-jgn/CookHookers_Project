@@ -7,10 +7,6 @@
     overflow:scroll;
 }
 
-.container .card .card-body {
-    overflow:scroll;
-}
-
 .container, .container-img{
     margin-top: 30px;
     margin-bottom: 80px;
@@ -20,7 +16,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 50px;
-    overflow: scroll;
     margin: 50px;
 }
   

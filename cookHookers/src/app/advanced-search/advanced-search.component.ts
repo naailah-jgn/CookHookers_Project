@@ -47,7 +47,7 @@ export class AdvancedSearchComponent implements OnInit{
 
   showRecipeByCategory(category : string){
     this.selectedCategory = category;
-    this.apiService.getMealsByCategories(category).subscribe(
+    this.apiService.getMealsByCategory(category).subscribe(
       (res : any )=> this.meals = res.meals
     )
   }

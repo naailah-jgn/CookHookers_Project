@@ -16,7 +16,7 @@ export class ApiService{
   getMealCategories(): Observable<any[]> {
     return this.http.get<any[]>('https://www.themealdb.com/api/json/v1/1/categories.php');
   }
-  getMealsByCategories(category : string) :Observable<any[]> {
+  getMealsByCategory(category : string) :Observable<any[]> {
     return this.http.get<any[]>('https://www.themealdb.com/api/json/v1/1/filter.php?c=' + category);
   }
 
@@ -35,5 +35,9 @@ export class ApiService{
 
   getMealByArea(area: string) :Observable<any[]> {
     return this.http.get<any[]>('https://www.themealdb.com/api/json/v1/1/filter.php?a=' + area);
+  }
+
+  getStarterMeal(starter: string) :Observable<any[]> {
+    return this.http.get<any[]>('https://www.themealdb.com/api/json/v1/1/filter.php?c=' + starter);
   }
 }
