@@ -37,6 +37,10 @@
     margin-left: 14vh;
 }
 
+.table table-striped col {
+    background-color: black;
+}
+
 .ingredients {
     position: absolute;
     left: 90vh;
@@ -44,23 +48,26 @@
     color: beige;
     border-radius: 5%;
     background-color: var(--colorbrownlight);
-    width: 100vh;
-    height: 30vh;
+    width: 115vh;
+    height: 80vh;
 }
 
 .description h2 {
     margin-top: 0;
-    margin-left: 14vh;
+    margin-left: 85vh;
 }
 
 .description {
     position: absolute;
-    left: 90vh;
+    left: 5vh;
     color: beige;
-    top: 100vh;
-    width: 150vh;
-    height: 30vh;
-    border-radius: 10%;
+    top: 130vh;
+    width: 200vh;
+    height: 50vh;
     background-color: var(--colorbrownlight);
-    color: black;
+    font-family: 'inset';
+    font-style: initial;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
 }

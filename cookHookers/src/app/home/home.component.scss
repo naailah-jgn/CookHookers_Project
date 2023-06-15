@@ -162,50 +162,41 @@
     position: inherit;
 }
 
-.carousel-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    height: 200px;
-}
-
-.carousel-inner img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.carousel-container span {
-    position: absolute;
-    top: 50%;
-    color: white;
-    font-size: 40px;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.carousel-control-prev {
-    font-size: larger;
-}
-
-.carousel-control-next {
-    font-size: 1000;
-    color: black;
-}
-
-.carousel-container span:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
 .prev {
     left: 10px;
 }
 
 .next {
     right: 10px;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    #carouselStarter,
+    #carouselSide,
+    #carouselDessert {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    #carouselStarter h2,
+    #carouselSide h2,
+    #carouselDessert h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    #carouselStarter h2,
+    #carouselSide h2,
+    #carouselDessert h2 {
+        font-size: 20px;
+    }
 }

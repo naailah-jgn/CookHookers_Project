@@ -6,7 +6,7 @@ import { HomeService } from '../home/home.service';
   templateUrl: './recipe-detail.component.html',
   styleUrls: ['./recipe-detail.component.scss']
 })
-export class RecipeDetailComponent {
+export class RecipeDetailComponent implements OnInit {
 recipe: any = {};
 
   constructor(private route: ActivatedRoute, private homeService: HomeService) { }

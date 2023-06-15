@@ -15,9 +15,8 @@ export class HomeComponent implements OnInit, OnDestroy{
   StarterSlides: any[] = [];
   sideSlides: any[] = [];
   dessertSlides: any[] = [];
-  router: any;
 
-  constructor(private homeService: HomeService, router: Router) {}
+  constructor(private homeService: HomeService, private router: Router) {}
 
   ngOnInit() {
     this.resetTimer();
@@ -63,7 +62,6 @@ export class HomeComponent implements OnInit, OnDestroy{
   goToPrevious(): void {
     const isFirstSlide = this.currentIndex === 0;
     const newIndex = isFirstSlide ? this.getTotalSlides() - 1 : this.currentIndex - 1;
-
     this.resetTimer();
     this.currentIndex = newIndex;
   }
@@ -71,7 +69,6 @@ export class HomeComponent implements OnInit, OnDestroy{
   goToNext(): void {
     const isLastSlide = this.currentIndex === this.getTotalSlides() - 1;
     const newIndex = isLastSlide ? 0 : this.currentIndex + 1;
-
     this.resetTimer();
     this.currentIndex = newIndex;
 
