@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, OnDestroy} from '@angular/core';
 import { HomeService } from './home.service';
 import { HomeInterface } from './types/home.interface';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -14,8 +15,9 @@ export class HomeComponent implements OnInit, OnDestroy{
   StarterSlides: any[] = [];
   sideSlides: any[] = [];
   dessertSlides: any[] = [];
+  router: any;
 
-  constructor(private homeService: HomeService) {}
+  constructor(private homeService: HomeService, router: Router) {}
 
   ngOnInit() {
     this.resetTimer();
@@ -76,6 +78,10 @@ export class HomeComponent implements OnInit, OnDestroy{
   }
   getTotalSlides(): number {
     return this.StarterSlides.length + this.sideSlides.length + this.dessertSlides.length;
+  }
+  goToRecipe(recipeId: string): void {
+    // Naviguer vers la fiche de détail de la recette en utilisant le paramètre recipe
+    this.router.navigate(['/detail', recipeId]);
   }
 
 }

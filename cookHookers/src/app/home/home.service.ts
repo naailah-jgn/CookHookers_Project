@@ -16,4 +16,7 @@ export class HomeService {
   getCategoryImage(category: string): Observable<any> {
     return this.http.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`);
   }
+  getRecipeById (recipeId: string):Observable<any> {
+    return this.http.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${recipeId}`);
+  }
   }
