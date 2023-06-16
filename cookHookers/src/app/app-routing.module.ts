@@ -4,10 +4,14 @@ import { HeaderComponent } from './header/header.component';
 import { ListOfRecipesComponent } from './list-of-recipes/list-of-recipes.component';
 import { PageTitleService } from './service/page-title.service';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
+import { HomeComponent } from './home/home.component';
+import { EnterComponent } from './enter/enter.component';
 
 const routes: Routes = [
+   { path: '', component: EnterComponent },
   {path: 'menu', component: HeaderComponent},
-  {path: 'detail', component: RecipeDetailComponent},
+  {path: 'detail/:id', component: RecipeDetailComponent},
+  { path: 'home', component: HomeComponent },
   {path: 'allRecipes', component: ListOfRecipesComponent, data: { pageTitle: 'Page de toutes les recettes' }},
   {path: 'allRecipes/entrees', component: ListOfRecipesComponent, data: { categories: 'entrees', pageTitle: 'Page de toutes les entrées' } },
   {path: 'allRecipes/sides', component: ListOfRecipesComponent, data: { categories: 'sides', pageTitle: 'Page de tous les accompagnements' } },

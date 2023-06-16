@@ -11,7 +11,7 @@ export class ListOfRecipesComponent implements OnInit {
   category!: string;
 
   constructor(private route: ActivatedRoute, private pageTitleService: PageTitleService) {}
-  
+
   ngOnInit(): void {
     this.category = this.route.snapshot.data['category'];
     // Effectuer le filtrage des recettes en fonction de la catégorie //
