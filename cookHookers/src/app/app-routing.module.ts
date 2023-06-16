@@ -8,6 +8,7 @@ import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { HomeComponent } from './home/home.component';
 import { EnterComponent } from './enter/enter.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 const routes: Routes = [
    { path: '', component: EnterComponent },
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path: 'allRecipes/autres', component: ListOfRecipesComponent, data: { categories: 'Miscellaneous', pageTitle: 'Autres recettes' } },
   {path: 'search', component: AdvancedSearchComponent },
   {path: 'signin', component: RegistrationFormComponent},
-  { path: 'home', component: HomeComponent }
+  { path: 'home', component: HomeComponent },
+  {path: 'login', component: LoginFormComponent}
 ];
 
 @NgModule({

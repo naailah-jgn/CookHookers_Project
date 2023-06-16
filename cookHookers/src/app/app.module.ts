@@ -15,6 +15,7 @@ import { SearchComponent } from './search/search.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CategoriesComponent,
     RegistrationFormComponent,
     AdvancedSearchComponent,
-    RecipeComponent
+    RecipeComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
