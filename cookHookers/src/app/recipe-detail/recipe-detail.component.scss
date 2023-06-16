@@ -1,11 +1,11 @@
 .titre {
     text-align: center;
     width: 90vh;
-    height: 80px;
+    height: 100px;
     position: absolute;
     margin-left: 50vh;
     font-family: Inter;
-    top: 200px;
+    top: 150px;
     font-size: 10px;
     font-weight: 20px;
     line-height: 500px;
@@ -61,6 +61,14 @@
     font-weight: 400;
     font-size: 17px;
     line-height: 23px;
+}
+
+.description p {
+    margin-top: 0;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
 }
 
 
