@@ -1,5 +1,6 @@
 import { ApiService } from './../service/api.service';
-import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PageTitleService } from '../service/page-title.service';
 
@@ -9,12 +10,18 @@ import { PageTitleService } from '../service/page-title.service';
   styleUrls: ['./list-of-recipes.component.scss']
 })
 export class ListOfRecipesComponent implements OnInit {
+  @Output() meal : any = {};
   category!: string;
   meals: any[] = [];
   letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
   mainCategories = ['Beef', 'Chicken', 'Lamb', 'Pasta', 'Pork', 'Seafood', 'Vegan', 'Vegetarian', 'Goat', 'Breakfast'];
   
-  constructor(private route: ActivatedRoute, private pageTitleService: PageTitleService, private apiService: ApiService) {}
+  constructor(private route: ActivatedRoute, private pageTitleService: PageTitleService, private apiService: ApiService, private fb: FormBuilder) {}
+  form = this.fb.group({
+    search: ['', Validators.required]
+  })
+
+
   
   ngOnInit(): void {
     this.category = this.route.snapshot.data['categories'];
@@ -83,4 +90,41 @@ export class ListOfRecipesComponent implements OnInit {
     }
   }
   
+  // onSearch() {
+  //   let meals: any[] = [];
+  //   let value: string = this.form.controls.search.value || '';
+  //   this.apiService.getMealsByCategories(value).subscribe(
+  //     (result: any) => {
+  //       if (result)
+  //         if (result.meals)
+  //           for (let element of result.meals) {
+  //             meals.push(element);
+  //           }
+  //       this.apiService.getMealsByIngredients(value).subscribe(
+  //         (result: any) => {
+  //           if (result)
+  //             if (result.meals)
+  //               for (let element of result.meals) {
+  //                 meals.push(element);
+  //               }
+
+  //           this.apiService.getMealByName(value).subscribe(
+  //             (result: any) => {
+  //               if (result)
+  //                 if (result.meals)
+  //                   for (let element of result.meals) {
+  //                     meals.push(element);
+  //                   }
+  //               console.log(meals);
+  //             }
+
+  //           )
+  //         }
+  //       )
+  //     }
+  //   )
+  // }
+
+
+
 }

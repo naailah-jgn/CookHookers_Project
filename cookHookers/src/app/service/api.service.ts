@@ -40,4 +40,8 @@ export class ApiService{
   getStarterMeal(starter: string) :Observable<any[]> {
     return this.http.get<any[]>('https://www.themealdb.com/api/json/v1/1/filter.php?c=' + starter);
   }
+  
+  getMealByName(name: string) :Observable<any[]> {
+    return this.http.get<any[]>('https://www.themealdb.com/api/json/v1/1/search.php?s=' + name);
+  } 
 }

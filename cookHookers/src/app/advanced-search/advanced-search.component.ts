@@ -1,5 +1,5 @@
 import { ApiService } from './../service/api.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-advanced-search',
