@@ -1,0 +1,64 @@
+<div
+  class="container d-flex flex-column justify-content-center align-items-center"
+>
+  <h2 class="mb-3">Incrivez-vous</h2>
+  <div class="row form-card">
+    <form [formGroup]="registration">
+      <div class="col-6 form-group mb-3">
+        <label for="email exampleFormControlInput1">Identifiant : </label>
+        <input
+          type="email"
+          name="email"
+          id="email exampleFormControlInput1"
+          formControlName="email"
+          placeholder="Email"
+          class="form-control"
+        />
+      </div>
+      <div class="col-6 form-group mb-3">
+        <label for="pwd exampleFormControlInput1">Mot de passe : </label>
+        <input
+          type="password"
+          name="pwd"
+          id="pwd exampleFormControlInput1"
+          formControlName="pwd"
+          placeholder="Entrez un mot de passe"
+          class="form-control"
+        />
+      </div>
+      <div class="col-6 form-group mb-3">
+        <label for="lastname exampleFormControlInput1">Nom : </label>
+        <input
+          type="text"
+          name="lastname"
+          id="lastname exampleFormControlInput1"
+          formControlName="lastname"
+          placeholder="Entrez votre nom de famille"
+          class="form-control"
+        />
+      </div>
+      <div class="col-6 form-group mb-3">
+        <label for="firstname exampleFormControlInput1">Prénom : </label>
+        <input
+          type="text"
+          name="firstname"
+          id="firstname exampleFormControlInput1"
+          formControlName="firstname"
+          placeholder="Entrez votre prénom"
+          class="form-control"
+        />
+      </div>
+      <div class="col-6 form-group mb-3">
+        <button
+          btn
+          btn-primary
+          type="submit"
+          [disabled]="!registration.valid"
+          (click)="onSubmitForm()"
+        >
+          Soumettre
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

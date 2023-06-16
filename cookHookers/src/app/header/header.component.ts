@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PageTitleService } from '../service/page-title.service';
 
 @Component({
@@ -12,13 +11,12 @@ export class HeaderComponent implements OnInit{
   pageTitle!: string;
   isUserLoggedIn: boolean = false;
 
-  constructor(private route: ActivatedRoute, private pageTitleService: PageTitleService){}
-
+  constructor(private route: ActivatedRoute, private pageTitleService: PageTitleService, private router: Router){}
+  
   ngOnInit(): void {
   }
 
   getPageTitle(): string {
     return this.pageTitleService.getPageTitle();
   }
-
 }

@@ -24,6 +24,11 @@
                 >Toutes les recettes</a
               >
             </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/search" routerLinkActive="active"
+                >Recherche Avancée</a
+              >
+            </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -48,7 +53,7 @@
                     class="dropdown-item"
                     routerLink="/allRecipes/sides"
                     routerLinkActive="active"
-                    >Side</a
+                    >Plat Principal</a
                   >
                 </li>
                 <li>
@@ -70,7 +75,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="/about" routerLinkActive="active"
+              <a class="nav-link" routerLink="/signin" routerLinkActive="active"
                 >S'inscrire</a
               >
             </li>
@@ -104,3 +109,9 @@
     </nav>
   </div>
 </div>
+
+// j'ai deux composants; header et categories. je veux créer une route dans le
+composant.html de categories me donne accès à la page de toutes mes entrées avec
+le bouton déjà cliqué // // si je clique sur le bouton entrée de la navbar de
+mon composant header, je veux que le bouton entrée de mon composant categories
+soit cliqué /
