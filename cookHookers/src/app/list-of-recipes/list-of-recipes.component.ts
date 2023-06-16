@@ -18,7 +18,6 @@ export class ListOfRecipesComponent implements OnInit {
   
   ngOnInit(): void {
     this.category = this.route.snapshot.data['categories'];
-      console.log(this.category);
       if (this.category){
         if (this.category === 'mainCourse'){
           this.meals = [];
