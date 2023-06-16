@@ -13,26 +13,27 @@ import { SearchComponent } from './search/search.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    FooterComponent,
-    HeaderComponent,
-    ListOfRecipesComponent,
-    AdvancedSearchComponent,
-    RecipeComponent,
-    RecipeDetailComponent,
-    SearchComponent,
-    CategoriesComponent,
-    RegistrationFormComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    ReactiveFormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+declarations: [
+AppComponent,
+FooterComponent,
+HeaderComponent,
+ListOfRecipesComponent,
+AdvancedSearchComponent,
+RecipeComponent,
+RecipeDetailComponent,
+SearchComponent,
+CategoriesComponent,
+RegistrationFormComponent
+],
+imports: [
+BrowserModule,
+AppRoutingModule,
+HttpClientModule,
+ReactiveFormsModule
+],
+providers: [],
+bootstrap: [AppComponent]
 })
 export class AppModule { }
