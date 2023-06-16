@@ -3,8 +3,12 @@
 >
   <h2 class="mb-3">Incrivez-vous</h2>
   <div class="row form-card">
-    <form [formGroup]="registration">
-      <div class="col-6 form-group mb-3">
+    <form
+      (ngSubmit)="registration.valid && onSubmitForm()"
+      [formGroup]="registration"
+      #myForm="ngForm"
+    >
+      <div class="col-6 form-group mb-4">
         <label for="email exampleFormControlInput1">Identifiant : </label>
         <input
           type="email"
@@ -14,8 +18,13 @@
           placeholder="Email"
           class="form-control"
         />
+        <div *ngIf="registration.controls['email'].errors">
+          <span *ngIf="registration.controls['email'].errors?.['required']"
+            >Le champ "email" est requis</span
+          >
+        </div>
       </div>
-      <div class="col-6 form-group mb-3">
+      <div class="col-6 form-group mb-4">
         <label for="pwd exampleFormControlInput1">Mot de passe : </label>
         <input
           type="password"
@@ -25,8 +34,13 @@
           placeholder="Entrez un mot de passe"
           class="form-control"
         />
+        <div *ngIf="registration.controls['pwd'].errors">
+          <span *ngIf="registration.controls['pwd'].errors?.['required']"
+            >Le champ "password" est requis</span
+          >
+        </div>
       </div>
-      <div class="col-6 form-group mb-3">
+      <div class="col-6 form-group mb-4">
         <label for="lastname exampleFormControlInput1">Nom : </label>
         <input
           type="text"
@@ -36,8 +50,13 @@
           placeholder="Entrez votre nom de famille"
           class="form-control"
         />
+        <div *ngIf="registration.controls['lastname'].errors">
+          <span *ngIf="registration.controls['lastname'].errors?.['required']"
+            >Le champ "Lastname" est requis</span
+          >
+        </div>
       </div>
-      <div class="col-6 form-group mb-3">
+      <div class="col-6 form-group mb-4">
         <label for="firstname exampleFormControlInput1">Prénom : </label>
         <input
           type="text"
@@ -47,8 +66,13 @@
           placeholder="Entrez votre prénom"
           class="form-control"
         />
+        <div *ngIf="registration.controls['firstname'].errors">
+          <span *ngIf="registration.controls['firstname'].errors?.['required']"
+            >Le champ "Firstname" est requis</span
+          >
+        </div>
       </div>
-      <div class="col-6 form-group mb-3">
+      <div class="col-6 form-group mb-4">
         <button
           btn
           btn-primary

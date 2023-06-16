@@ -6,6 +6,7 @@ import { ListOfRecipesComponent } from './list-of-recipes/list-of-recipes.compon
 import { PageTitleService } from './service/page-title.service';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 const routes: Routes = [
   {path: 'menu', component: HeaderComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'allRecipes/desserts', component: ListOfRecipesComponent, data: { categories: 'Dessert', pageTitle: 'Desserts' } },
   {path: 'allRecipes/autres', component: ListOfRecipesComponent, data: { categories: 'Miscellaneous', pageTitle: 'Autres recettes' } },
   {path: 'search', component: AdvancedSearchComponent },
-  {path: 'signin', component: RegistrationFormComponent}
+  {path: 'signin', component: RegistrationFormComponent},
+  {path: 'login', component: LoginFormComponent}
 ];
 
 @NgModule({

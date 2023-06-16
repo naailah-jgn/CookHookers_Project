@@ -13,6 +13,7 @@ import { SearchComponent } from './search/search.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
 declarations: [
@@ -25,7 +26,8 @@ RecipeComponent,
 RecipeDetailComponent,
 SearchComponent,
 CategoriesComponent,
-RegistrationFormComponent
+RegistrationFormComponent,
+LoginFormComponent
 ],
 imports: [
 BrowserModule,
