@@ -48,7 +48,7 @@
 //     right: 10px;
 // }
 #carouselStarter {
-    width: 1500px;
+    width: 1000px;
     height: 250px;
     left: 46px;
     top: 60px;
@@ -61,7 +61,7 @@
 
 #carouselSide {
     height: 250px;
-    width: 1500px;
+    width: 1000px;
     left: 46px;
     top: 90px;
     border-radius: 10px;
@@ -73,7 +73,7 @@
 
 #carouselDessert {
     height: 250px;
-    width: 1500px;
+    width: 1000px;
     left: 46px;
     top: 150px;
     border-radius: 10px;
@@ -84,23 +84,23 @@
 }
 
 #carouselStarter img {
-    max-width: 400px;
+    width: 800px;
     max-height: 250px;
-    object-fit: inherit;
+    object-fit: none;
     border-radius: 10px;
 }
 
 #carouselSide img {
-    max-width: 400px;
+    width: 800px;
     max-height: 250px;
-    object-fit: inherit;
+    object-fit: none;
     border-radius: 10px;
 }
 
 #carouselDessert img {
-    max-width: 400px;
+    width: 800px;
     max-height: 250px;
-    object-fit: inherit;
+    object-fit: none;
     border-radius: 10px;
 }
 
@@ -111,6 +111,7 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-shadow: #F0FC00 2px 2px 0, #FF6200 4px 4px 0, #CC0808 6px 6px 0.5px, #333 8px 11px 10px;
     color: #D9D9D9;
     font-size: 18px;
     padding: 10px;
