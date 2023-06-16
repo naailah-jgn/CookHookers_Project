@@ -13,7 +13,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 const routes: Routes = [
    { path: '', component: EnterComponent },
   {path: 'menu', component: HeaderComponent},
-  {path: 'detail', component: RecipeDetailComponent},
+  {path: 'detail/:id', component: RecipeDetailComponent},
   {path: 'allRecipes', component: ListOfRecipesComponent, data: { pageTitle: 'Toutes les recettes' }},
   {path: 'allRecipes/entrees', component: ListOfRecipesComponent, data: { categories: 'Starter', pageTitle: 'Entrées' } },
   {path: 'allRecipes/sides', component: ListOfRecipesComponent, data: { categories: 'mainCourse', pageTitle: 'Accompagnements' } },
