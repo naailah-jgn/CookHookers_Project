@@ -1,7 +1,10 @@
+<!-- <app-search (searchTextChanged)="onSearchTextEntred($event)"></app-search> -->
 <app-search></app-search>
 <app-categories></app-categories>
-<div class="container">
-  <div class="row card col-4">
+<!-- <div class="container" *ngFor="let meal of meals"> -->
+  <div class="container">
+  <!-- <div class="row card col-4" *ngIf="searchText === '' || meal.tolowerCase().includes(searchText) "> -->
+    <div class="row card col-4">
     <div
       class="card-header header-style text-center col d-flex flex-row justify-content-center"
     >

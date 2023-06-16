@@ -2,7 +2,6 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 .Footer {
-    background-color: rgba(171, 112, 64, 0.58);
     padding: 1px;
     margin: 0;
     text-align: center;
@@ -10,6 +9,32 @@
     width: 100%;
     bottom: 0;
     min-height: 10vh;
+}
+
+.footerTitle {
+    padding-top: 0.8rem;
+}
+
+.padding {
+    padding-top: 1.6rem;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.container{
+    box-sizing: border-box;
+    background-color: var(--colorbrownlight);
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 100%;
+    position: fixed;
+    z-index: 2;
 }
 
 .arran {
